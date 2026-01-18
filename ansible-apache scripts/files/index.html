@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .info-box {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Developer name -->
+    <h1>Developed by Kevin Valencia</h1>
+
+    <!-- IP Address -->
+    <div class="info-box">
+        <strong>Current IP Address:</strong>
+        <span id="ip">Loading...</span>
+    </div>
+
+    <!-- Date and Time -->
+    <div class="info-box">
+        <strong>Current Date & Time:</strong>
+        <span id="datetime"></span>
+    </div>
+
+    <!-- Map hyperlink -->
+    <div class="info-box">
+        <a href="https://www.google.com/maps?q=your+location" target="_blank">
+            Click here to view my location
+        </a>
+    </div>
+
+    <script>
+        // Display date & time
+        function updateTime() {
+            document.getElementById("datetime").textContent =
+                new Date().toLocaleString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Fetch public IP
+        fetch("https://api.ipify.org?format=json")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("ip").textContent = data.ip;
+            })
+            .catch(() => {
+                document.getElementById("ip").textContent = "Unable to load";
+            });
+    </script>
+
+</body>
+</html>

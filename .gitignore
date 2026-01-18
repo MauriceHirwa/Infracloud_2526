@@ -1,0 +1,12 @@
+
+# Python venv & cache
+python_venv/
+**/__pycache__/
+*.pyc
+
+# VS Code (optioneel)
+.vscode/
+
+# OS
+.DS_Store
+
