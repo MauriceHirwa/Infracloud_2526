@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome back</h2>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+        <p>Log in to your account</p>
+
+        <!-- GitHub Login -->
+        <button class="github-btn">Log in with KEV</button>
+
+        <p>or</p>
+
+        <!-- Email/Password Form -->
+        <form action="/login/v2" method="post">
+            <label for="username">Email</label>
+            <input type="email" id="username" name="username" placeholder="Enter your email address" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-btn">Log in</button>
+        </form>
+
+        <div class="links">
+            <a href="/signup/v2">Don't have an account? Sign up</a><br>
+            <a href="/update_pw/v2">Forgot password?</a>
+        </div>
+    </div>
+</body>
+</html>
