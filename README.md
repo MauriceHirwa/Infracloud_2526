@@ -15,7 +15,11 @@ Netconf/N4_NETCONF_Lab_8_3_7/
 Netwerkautomatisering via NETCONF met XML-gebaseerde data-uitwisseling.
 
 
+<<<<<<< HEAD
 Ansible
+=======
+##Ansible
+>>>>>>> 8d80664477d10aa6bb34a566981166082ae2d287
 
 An2 – Ansible playbook met virtuele router
 Ansible/An2_Ansible_Virtuele_Router/
@@ -29,4 +33,8 @@ Docker
 
 Di2 – Eigen Docker image
 Docker/Di2_Eigen_Docker_Image/
+<<<<<<< HEAD
 Dockerfile en Python/Flask-applicatie die in een container wordt uitgerold.
+=======
+Dockerfile en Python/Flask-applicatie die in een container wordt uitgerold.
+>>>>>>> 8d80664477d10aa6bb34a566981166082ae2d287
